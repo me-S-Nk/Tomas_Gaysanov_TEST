@@ -1,0 +1,831 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    width: 100%;
+
+    scroll-behavior: smooth;
+}
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+
+    font-family: "Helvetica Neue", Arial, sans-serif;
+
+    overflow-x: hidden;
+
+    background: #dddddd;
+
+    color: #303030;
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+body {
+    background:
+        #dddddd;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.navigation {
+    position: fixed;
+
+    top: 39px;
+    right: 82px;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+}
+
+
+/* =====================================================
+   NAV BUTTON
+===================================================== */
+
+.nav-button {
+    position: relative;
+
+    width: 183px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding-left: 9px;
+    padding-right: 39px;
+
+    border-radius: 14px;
+
+    text-decoration: none;
+
+    color: #777777;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    background:
+        linear-gradient(
+            180deg,
+            #eeeeee 0%,
+            #e2e2e2 100%
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.65);
+
+    box-shadow:
+        0 5px 8px rgba(0, 0, 0, 0.18),
+        inset 0 1px 1px
+        rgba(255, 255, 255, 0.85);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.nav-button:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 11px rgba(0, 0, 0, 0.20),
+        inset 0 1px 1px
+        rgba(255, 255, 255, 0.9);
+}
+
+
+/* =====================================================
+   ACTIVE BUTTON
+===================================================== */
+
+.nav-button-active {
+    color: #eeeeee;
+
+    background:
+        linear-gradient(
+            180deg,
+            #858585 0%,
+            #777777 100%
+        );
+
+    border-color:
+        rgba(255, 255, 255, 0.2);
+
+    box-shadow:
+        0 5px 9px rgba(0, 0, 0, 0.25),
+        inset 0 1px 1px
+        rgba(255, 255, 255, 0.15);
+}
+
+
+/* =====================================================
+   NAV ICON
+===================================================== */
+
+.nav-icon {
+    position: absolute;
+
+    top: 4px;
+    right: 5px;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    color: #858585;
+
+    background:
+        rgba(255, 255, 255, 0.18);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.65);
+
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.12),
+        inset 0 0 0 1px
+        rgba(255, 255, 255, 0.2);
+}
+
+
+.nav-button-active .nav-icon {
+    color: #eeeeee;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    border-color:
+        rgba(255, 255, 255, 0.22);
+}
+
+
+.nav-icon svg {
+    width: 23px;
+    height: 23px;
+}
+
+
+/* =====================================================
+   COOPERATION SECTION
+===================================================== */
+
+.cooperation-section {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 1585px;
+
+    overflow: hidden;
+
+    background: #dddddd;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.cooperation-intro {
+    position: absolute;
+
+    top: 159px;
+    left: 50%;
+
+    width: 100%;
+
+    transform:
+        translateX(-50%);
+
+    text-align: center;
+}
+
+
+.cooperation-title {
+    margin: 0;
+
+    color: #363636;
+
+    font-size: 32px;
+
+    line-height: 1.08;
+
+    font-weight: 400;
+
+    letter-spacing: -1px;
+}
+
+
+.cooperation-description {
+    margin-top: 24px;
+
+    color: #747474;
+
+    font-size: 19px;
+
+    line-height: 1.12;
+
+    font-weight: 400;
+
+    letter-spacing: -0.35px;
+}
+
+
+/* =====================================================
+   BUSINESS GOAL
+===================================================== */
+
+.business-goal {
+    position: absolute;
+
+    top: 378px;
+    left: 50%;
+
+    width: 100%;
+
+    transform:
+        translateX(-50%);
+
+    text-align: center;
+}
+
+
+.business-title {
+    margin: 0;
+
+    color: #343434;
+
+    font-size: 31px;
+
+    line-height: 1.04;
+
+    font-weight: 400;
+
+    letter-spacing: -1px;
+}
+
+
+/* =====================================================
+   GOAL CHOICES
+===================================================== */
+
+.goal-choices {
+    position: relative;
+
+    width: 560px;
+    height: 110px;
+
+    margin:
+        27px
+        auto
+        0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    align-items: center;
+}
+
+
+.goal-choice {
+    position: relative;
+
+    width: 82px;
+    height: 75px;
+
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   CIRCLE
+===================================================== */
+
+.choice-circle {
+    position: absolute;
+
+    left: 50%;
+    top: 40px;
+
+    width: 22px;
+    height: 22px;
+
+    transform:
+        translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f4f4f4 0%,
+            #dedede 100%
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.85);
+
+    box-shadow:
+        2px 3px 5px rgba(0, 0, 0, 0.14),
+        -1px -1px 3px
+        rgba(255, 255, 255, 0.9);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.goal-choice:hover .choice-circle {
+    transform:
+        translateX(-50%)
+        scale(1.05);
+
+    box-shadow:
+        2px 4px 7px rgba(0, 0, 0, 0.17),
+        -1px -1px 4px
+        rgba(255, 255, 255, 0.9);
+}
+
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.choice-label {
+    position: absolute;
+
+    width: max-content;
+
+    color: #3d3d3d;
+
+    font-size: 18px;
+
+    line-height: 1;
+
+    font-weight: 400;
+
+    white-space: nowrap;
+}
+
+
+.choice-label-top {
+    left: 50%;
+    top: 0;
+
+    transform:
+        translateX(-50%);
+}
+
+
+.choice-label-bottom {
+    left: 50%;
+    top: 69px;
+
+    transform:
+        translateX(-50%);
+}
+
+
+/* =====================================================
+   COMBINATION
+===================================================== */
+
+.combination-block {
+    position: absolute;
+
+    top: 646px;
+    left: 50%;
+
+    width: 100%;
+
+    transform:
+        translateX(-50%);
+
+    text-align: center;
+}
+
+
+.combination-title {
+    margin: 0;
+
+    color: #343434;
+
+    font-size: 31px;
+
+    line-height: 1;
+
+    font-weight: 400;
+
+    letter-spacing: -1px;
+}
+
+
+/* =====================================================
+   DIAGRAM
+===================================================== */
+
+.combination-image {
+    display: block;
+
+    width: 544px;
+    height: 344px;
+
+    margin:
+        17px
+        auto
+        0;
+
+    object-fit: contain;
+
+    user-select: none;
+}
+
+
+.combination-description {
+    margin-top: 0;
+
+    color: #727272;
+
+    font-size: 18px;
+
+    line-height: 1.05;
+
+    font-weight: 400;
+
+    letter-spacing: -0.4px;
+}
+
+
+/* =====================================================
+   FINAL TEXT
+===================================================== */
+
+.cooperation-final {
+    position: absolute;
+
+    top: 1151px;
+    left: 50%;
+
+    width: 100%;
+
+    transform:
+        translateX(-50%);
+
+    text-align: center;
+
+    color: #343434;
+
+    font-size: 30px;
+
+    line-height: 1.04;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+}
+
+
+.cooperation-final p {
+    margin: 0;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1200px) {
+
+    .navigation {
+        right: 40px;
+
+        gap: 14px;
+    }
+
+
+    .nav-button {
+        width: 165px;
+    }
+}
+
+
+/* =====================================================
+   900 PX
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .navigation {
+        top: 25px;
+
+        right: 20px;
+        left: 20px;
+
+        justify-content: flex-end;
+
+        gap: 8px;
+    }
+
+
+    .nav-button {
+        width: auto;
+
+        min-width: 120px;
+
+        padding-left: 10px;
+        padding-right: 38px;
+
+        font-size: 14px;
+    }
+
+
+    .cooperation-title {
+        font-size: 28px;
+    }
+
+
+    .cooperation-description {
+        font-size: 17px;
+    }
+
+
+    .business-title,
+    .combination-title {
+        font-size: 28px;
+    }
+
+
+    .goal-choices {
+        width: 520px;
+    }
+
+
+    .choice-label {
+        font-size: 16px;
+    }
+
+
+    .cooperation-final {
+        font-size: 27px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .navigation {
+        top: 15px;
+
+        left: 10px;
+        right: 10px;
+
+        justify-content: center;
+
+        gap: 5px;
+    }
+
+
+    .nav-button {
+        height: 38px;
+
+        min-width: 0;
+
+        padding-left: 8px;
+        padding-right: 34px;
+
+        border-radius: 12px;
+
+        font-size: 12px;
+    }
+
+
+    .nav-icon {
+        width: 30px;
+        height: 30px;
+
+        top: 4px;
+        right: 4px;
+    }
+
+
+    .nav-icon svg {
+        width: 19px;
+        height: 19px;
+    }
+
+
+    .cooperation-section {
+        min-height: 1250px;
+    }
+
+
+    .cooperation-intro {
+        top: 115px;
+
+        padding:
+            0 20px;
+    }
+
+
+    .cooperation-title {
+        font-size: 25px;
+
+        line-height: 1.08;
+    }
+
+
+    .cooperation-description {
+        margin-top: 20px;
+
+        font-size: 16px;
+
+        line-height: 1.15;
+    }
+
+
+    .business-goal {
+        top: 330px;
+
+        padding:
+            0 15px;
+    }
+
+
+    .business-title {
+        font-size: 25px;
+
+        line-height: 1.08;
+    }
+
+
+    .goal-choices {
+        width: 100%;
+
+        max-width: 440px;
+
+        height: 135px;
+
+        margin-top: 25px;
+    }
+
+
+    .goal-choice {
+        width: 65px;
+    }
+
+
+    .choice-label {
+        font-size: 13px;
+    }
+
+
+    .combination-block {
+        top: 590px;
+
+        padding:
+            0 10px;
+    }
+
+
+    .combination-title {
+        font-size: 25px;
+
+        line-height: 1.08;
+    }
+
+
+    .combination-image {
+        width: 544px;
+
+        max-width: 100%;
+
+        height: auto;
+
+        margin-top: 12px;
+    }
+
+
+    .combination-description {
+        font-size: 16px;
+
+        line-height: 1.08;
+    }
+
+
+    .cooperation-final {
+        top: 1010px;
+
+        padding:
+            0 20px;
+
+        font-size: 23px;
+
+        line-height: 1.08;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .navigation {
+        gap: 4px;
+    }
+
+
+    .nav-button {
+        font-size: 10px;
+
+        padding-left: 6px;
+        padding-right: 29px;
+    }
+
+
+    .nav-icon {
+        width: 26px;
+        height: 26px;
+
+        top: 3px;
+        right: 3px;
+    }
+
+
+    .nav-icon svg {
+        width: 17px;
+        height: 17px;
+    }
+
+
+    .goal-choices {
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        width: 300px;
+
+        height: 185px;
+    }
+
+
+    .goal-choice:nth-child(4),
+    .goal-choice:nth-child(5),
+    .goal-choice:nth-child(6) {
+        margin-top: 72px;
+    }
+
+
+    .choice-label {
+        font-size: 12px;
+    }
+
+
+    .combination-block {
+        top: 650px;
+    }
+
+
+    .cooperation-final {
+        top: 1060px;
+
+        font-size: 21px;
+    }
+}

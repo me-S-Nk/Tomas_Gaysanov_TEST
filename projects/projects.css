@@ -1,0 +1,735 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+
+    font-family: "Helvetica Neue", Arial, sans-serif;
+
+    overflow-x: hidden;
+
+    background: #dddddd;
+
+    color: #303030;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.navigation {
+    position: fixed;
+
+    top: 39px;
+    right: 82px;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+}
+
+
+.nav-button {
+    position: relative;
+
+    width: 183px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-left: 9px;
+    padding-right: 39px;
+
+    border-radius: 14px;
+
+    text-decoration: none;
+
+    color: #777777;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    background:
+        linear-gradient(
+            180deg,
+            #eeeeee 0%,
+            #e2e2e2 100%
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.65);
+
+    box-shadow:
+        0 5px 8px rgba(0, 0, 0, 0.18),
+        inset 0 1px 1px
+        rgba(255, 255, 255, 0.85);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.nav-button:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 11px rgba(0, 0, 0, 0.20),
+        inset 0 1px 1px
+        rgba(255, 255, 255, 0.9);
+}
+
+
+.nav-button-active {
+    color: #eeeeee;
+
+    background:
+        linear-gradient(
+            180deg,
+            #858585 0%,
+            #777777 100%
+        );
+
+    border-color:
+        rgba(255, 255, 255, 0.2);
+
+    box-shadow:
+        0 5px 9px rgba(0, 0, 0, 0.25),
+        inset 0 1px 1px
+        rgba(255, 255, 255, 0.15);
+}
+
+
+/* =====================================================
+   NAV ICON
+===================================================== */
+
+.nav-icon {
+    position: absolute;
+
+    top: 4px;
+    right: 5px;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    color: #858585;
+
+    background:
+        rgba(255, 255, 255, 0.18);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.65);
+
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.12),
+        inset 0 0 0 1px
+        rgba(255, 255, 255, 0.2);
+}
+
+
+.nav-button-active .nav-icon {
+    color: #eeeeee;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    border-color:
+        rgba(255, 255, 255, 0.22);
+}
+
+
+.nav-icon svg {
+    width: 23px;
+    height: 23px;
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.projects-page {
+    width: 100%;
+
+    padding-top: 160px;
+    padding-bottom: 110px;
+}
+
+
+/* =====================================================
+   GROUPS
+===================================================== */
+
+.projects-group {
+    width: 1200px;
+    max-width: calc(100% - 80px);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.launched-group {
+    margin-top: 112px;
+}
+
+
+.past-group {
+    margin-top: 112px;
+}
+
+
+.ex-group {
+    margin-top: 105px;
+}
+
+
+/* =====================================================
+   GROUP TITLES
+===================================================== */
+
+.group-title {
+    margin: 0;
+
+    text-align: center;
+
+    font-size: 48px;
+
+    line-height: 1;
+
+    font-weight: 600;
+
+    letter-spacing: -1.5px;
+
+    color: #343434;
+}
+
+
+.ex-group .group-title {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.ex-group .group-title span:nth-child(2) {
+    color: #707070;
+}
+
+
+.ex-group .group-title span:nth-child(3) {
+    color: #979797;
+}
+
+
+/* =====================================================
+   PROJECT GRID
+===================================================== */
+
+.project-grid {
+    display: grid;
+
+    gap: 24px;
+}
+
+
+/* =====================================================
+   ACTIVE
+===================================================== */
+
+.active-grid {
+    grid-template-columns:
+        repeat(4, 282px);
+
+    justify-content: center;
+
+    margin-top: 48px;
+}
+
+
+/* =====================================================
+   LAUNCHED
+===================================================== */
+
+.launched-grid {
+    grid-template-columns:
+        repeat(3, 282px);
+
+    justify-content: center;
+
+    margin-top: 48px;
+}
+
+
+/* =====================================================
+   PAST
+===================================================== */
+
+.past-grid {
+    grid-template-columns:
+        repeat(4, 282px);
+
+    justify-content: center;
+
+    margin-top: 48px;
+}
+
+
+/* =====================================================
+   PROJECT CARD
+===================================================== */
+
+.project-card {
+    position: relative;
+
+    width: 282px;
+    height: 314px;
+
+    padding: 12px;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    background: #e5e5e5;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.85);
+
+    box-shadow:
+        0 6px 11px rgba(0, 0, 0, 0.14),
+        0 0 7px rgba(255, 255, 255, 0.75),
+        inset 0 1px 2px
+        rgba(255, 255, 255, 0.9);
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.project-card:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 14px rgba(0, 0, 0, 0.16),
+        0 0 8px rgba(255, 255, 255, 0.8),
+        inset 0 1px 2px
+        rgba(255, 255, 255, 0.9);
+}
+
+
+/* =====================================================
+   LAUNCHED CARD
+===================================================== */
+
+.project-card-launched {
+    height: 344px;
+}
+
+
+/* =====================================================
+   PROJECT IMAGE
+===================================================== */
+
+.project-image {
+    display: block;
+
+    width: 258px;
+    height: 174px;
+
+    flex: 0 0 174px;
+
+    object-fit: cover;
+
+    border-radius: 9px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.65);
+
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.project-title {
+    margin:
+        13px
+        0
+        0;
+
+    color: #303030;
+
+    font-size: 24px;
+
+    line-height: 0.92;
+
+    font-weight: 500;
+
+    letter-spacing: -0.7px;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.project-description {
+    margin:
+        9px
+        0
+        0;
+
+    color: #555555;
+
+    font-size: 14px;
+
+    line-height: 1.08;
+
+    font-weight: 400;
+}
+
+
+/* =====================================================
+   YEARS
+===================================================== */
+
+.project-years {
+    position: absolute;
+
+    left: 12px;
+    bottom: 10px;
+
+    color: #8c8c8c;
+
+    font-size: 14px;
+
+    line-height: 1;
+}
+
+
+/* =====================================================
+   EX GRID
+===================================================== */
+
+.ex-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:
+        18px 24px;
+
+    margin-top: 42px;
+}
+
+
+/* =====================================================
+   EX CARD
+===================================================== */
+
+.ex-card {
+    position: relative;
+
+    width: 100%;
+    height: 80px;
+
+    padding:
+        10px
+        13px;
+
+    border-radius: 14px;
+
+    background: #e5e5e5;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.85);
+
+    box-shadow:
+        0 5px 10px rgba(0, 0, 0, 0.13),
+        0 0 7px rgba(255, 255, 255, 0.75),
+        inset 0 1px 2px
+        rgba(255, 255, 255, 0.9);
+}
+
+
+/* =====================================================
+   EX TEXT
+===================================================== */
+
+.ex-main h3 {
+    margin: 0;
+
+    color: #303030;
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    letter-spacing: -0.5px;
+}
+
+
+.ex-main p {
+    margin-top: 8px;
+
+    color: #5e5e5e;
+
+    font-size: 14px;
+
+    line-height: 1;
+}
+
+
+/* =====================================================
+   EX YEAR
+===================================================== */
+
+.ex-year {
+    position: absolute;
+
+    top: 12px;
+    right: 13px;
+
+    color: #858585;
+
+    font-size: 14px;
+
+    line-height: 1;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1280px) {
+
+    .navigation {
+        right: 40px;
+        gap: 14px;
+    }
+
+    .projects-group {
+        max-width:
+            calc(100% - 40px);
+    }
+}
+
+
+@media (max-width: 1150px) {
+
+    .active-grid,
+    .past-grid {
+        grid-template-columns:
+            repeat(3, 282px);
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .navigation {
+        top: 25px;
+
+        right: 20px;
+        left: 20px;
+
+        justify-content: flex-end;
+
+        gap: 8px;
+    }
+
+    .nav-button {
+        width: auto;
+
+        min-width: 120px;
+
+        padding-left: 10px;
+        padding-right: 38px;
+
+        font-size: 14px;
+    }
+
+    .projects-page {
+        padding-top: 125px;
+    }
+
+    .projects-group {
+        max-width:
+            calc(100% - 30px);
+    }
+
+    .active-grid,
+    .past-grid,
+    .launched-grid {
+        grid-template-columns:
+            repeat(2, 282px);
+    }
+
+    .group-title {
+        font-size: 40px;
+    }
+
+    .ex-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .navigation {
+        top: 15px;
+
+        right: 10px;
+        left: 10px;
+
+        justify-content: center;
+
+        gap: 5px;
+    }
+
+    .nav-button {
+        height: 38px;
+
+        min-width: 0;
+
+        padding-left: 8px;
+        padding-right: 34px;
+
+        border-radius: 12px;
+
+        font-size: 12px;
+    }
+
+    .nav-icon {
+        width: 30px;
+        height: 30px;
+
+        top: 4px;
+        right: 4px;
+    }
+
+    .nav-icon svg {
+        width: 19px;
+        height: 19px;
+    }
+
+    .projects-page {
+        padding-top: 105px;
+    }
+
+    .projects-group {
+        max-width:
+            calc(100% - 24px);
+    }
+
+    .active-grid,
+    .past-grid,
+    .launched-grid {
+        grid-template-columns: 282px;
+    }
+
+    .group-title {
+        font-size: 34px;
+    }
+
+    .ex-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .nav-button {
+        font-size: 10px;
+
+        padding-left: 6px;
+        padding-right: 29px;
+    }
+
+    .nav-icon {
+        width: 26px;
+        height: 26px;
+
+        top: 3px;
+        right: 3px;
+    }
+
+    .nav-icon svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .project-card {
+        width: 282px;
+    }
+
+    .group-title {
+        font-size: 30px;
+    }
+
+    .ex-group .group-title {
+        gap: 4px;
+    }
+
+    .ex-grid {
+        gap: 14px;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .nav-button,
+    .project-card {
+        transition: none !important;
+    }
+}
