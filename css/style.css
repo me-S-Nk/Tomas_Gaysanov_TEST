@@ -19,7 +19,7 @@ body {
     margin: 0;
     font-family: "Helvetica Neue", Arial, sans-serif;
     overflow-x: hidden;
-    background: #dddddd;
+    background: #E5E5E5;
     color: #303030;
 }
 
@@ -49,26 +49,56 @@ body {
 
 .nav-button {
     position: relative;
-    width: 183px;
-    height: 42px;
+
+    width: 180px;
+    height: 40px;
+
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding-left: 9px;
-    padding-right: 39px;
-    border-radius: 14px;
+
+    box-sizing: border-box;
+
+    padding: 0 7px 0 20px;
+
+    border-radius: 16px;
+
+    background: #E4E4E4;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 5px 8px rgba(0, 0, 0, 0.18),
+        inset 0 1px 1px rgba(255, 255, 255, 0.9);
+
+    /* padding-left: 9px; */
+    /* padding-right: 39px;
+    border-radius: 14px; */
     text-decoration: none;
     color: #777777;
     font-size: 16px;
     font-weight: 400;
-    background: linear-gradient(180deg, #eeeeee 0%, #e2e2e2 100%);
-    border: 1px solid rgba(255, 255, 255, 0.65);
-    box-shadow:
-        0 5px 8px rgba(0, 0, 0, 0.18),
-        inset 0 1px 1px rgba(255, 255, 255, 0.85);
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
+}
+
+.nav-button span{
+        flex: 1;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    color: #777777;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+.nav-button-contact span{
+    color: #E4E4E4;
 }
 
 .nav-button:hover {
@@ -156,11 +186,40 @@ body {
 }
 
 
+
 /* =====================================================
    5. SMOKE (ОДИН СТАТИЧНЫЙ СЛОЙ, ОПУЩЕН НА 15px)
 ===================================================== */
+.hero-cooperation-smoke {
+    position: relative;
+    width: 100%;
+    height: 0;
+    z-index: 50;
+    pointer-events: none;
+}
 
-.smoke-container {
+.hero-cooperation-smoke img {
+    position: absolute;
+
+    left: 50%;
+    bottom: -140px;
+
+    width: 1450px;
+    height: 300px;
+
+    max-width: none;
+
+    transform: translateX(-50%);
+
+    display: block;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+
+
+/* .smoke-container {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -169,25 +228,27 @@ body {
     height: 300px;
     overflow: hidden;
     pointer-events: none;
-}
+} */
 
 /* Дым опущен вниз на 15px (было -42px, стало -57px), полностью статичный */
-.smoke {
+/* .smoke {
     position: absolute;
+
     left: 50%;
-    bottom: -60px;
-    width: 1600px;
-    height: 390px;
+    bottom: 0;
+
+    width: 1050px;
+    height: 300px;
+
     max-width: none;
-    object-fit: fill;
-    mix-blend-mode: screen;
-    opacity: 0.95;
+
+    transform: translateX(-50%);
+
+    z-index: 20;
+
     pointer-events: none;
     user-select: none;
-    transform: translateX(-50%);
-    filter: blur(0.2px);
-}
-
+} */
 
 /* =====================================================
    6. COOPERATION
@@ -196,7 +257,7 @@ body {
 .cooperation-section {
     position: relative;
     width: 100%;
-    padding-top: 100px;
+    padding-top: 120px;
     /* padding-bottom: 120px; */
     background: #dddddd;
 }
@@ -228,7 +289,7 @@ body {
 }
 
 .cooperation-description {
-    margin-top: 24px;
+    margin-top: 32px;
     color: #747474;
     font-size: 19px;
     line-height: 1.12;
@@ -265,12 +326,13 @@ body {
 
 .goal-choices {
     position: relative;
-    width: 560px;
-    height: 110px;
+    display: block;
+    width: 460px;
+    height: auto;
     margin: 27px auto 0;
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(6, 1fr);
-    align-items: center;
+    align-items: center; */
 }
 
 .goal-choice {
@@ -511,6 +573,14 @@ body {
         box-shadow 0.2s ease;
 }
 
+.proj-proj{
+    
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
 .project-card:hover {
     transform: translateY(-2px);
     box-shadow:
@@ -614,7 +684,7 @@ body {
 .publicity-section {
     position: relative;
     width: 100%;
-    padding-top: 150px;
+    padding-top: 70px;
     padding-bottom: 50px;
     background: #dddddd;
 }
@@ -628,13 +698,7 @@ body {
     font-weight: 600;
     letter-spacing: -1.5px;
     text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.18);
-        background: linear-gradient(
-        90deg,
-        #222222 0%,
-        #333333 35%,
-        #777777 65%,
-        #b8b8b8 100%
-    );
+    background: linear-gradient(90deg, #303030 46%, #454545 25%, #777777 50%, #bdbdbd 70%, #eeeeee 85%, #ffffff 100%); 
 
     -webkit-background-clip: text;
     background-clip: text;
@@ -745,7 +809,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-right: 43px;
+    /* padding-right: 43px; */
     border-radius: 14px;
     text-decoration: none;
     color: #777777;
@@ -761,11 +825,16 @@ body {
         box-shadow 0.2s ease;
 }
 
+.telegram{
+    display: flex;
+    justify-content: center;
+}
+
 .social-button:hover {
     transform: translateY(-1px);
     box-shadow:
-        0 7px 11px rgba(0, 0, 0, 0.15),
-        inset 0 1px 2px rgba(255, 255, 255, 0.95);
+        0 7px 11px rgba(0, 0, 0, 0.15);
+        /* inset 0 1px 2px rgba(255, 255, 255, 0.95); */
 }
 
 .social-button-icon {
@@ -847,44 +916,53 @@ body {
 }
 
 .round-social-icon {
-    width: 65px;
-    height: 65px;
+    width: 44px;
+    height: 44px;
+
+    flex: 0 0 44px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    box-sizing: border-box;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
     border-radius: 50%;
-    color: #eeeeee;
+
     text-decoration: none;
-    background: linear-gradient(145deg, #eeeeee 0%, #dddddd 100%);
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    box-shadow:
-        4px 5px 8px rgba(0, 0, 0, 0.18),
-        -2px -2px 5px rgba(255, 255, 255, 0.85),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.28);
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
 }
 
-.round-social-icon:hover {
+/* .round-social-icon:hover {
     transform: translateY(-2px);
     box-shadow:
         5px 7px 10px rgba(0, 0, 0, 0.2),
         -2px -2px 5px rgba(255, 255, 255, 0.9);
-}
+} */
 
 .round-social-icon svg {
     width: 39px;
     height: 39px;
 }
 
+.round-social-icon img {
+    display: block;
+
+    width: 44px;
+    height: 44px;
+
+    object-fit: contain;
+}
 
 /* =====================================================
    10. RESPONSIVE
 ===================================================== */
 
 /* 1280px / 1200px TABLET */
-@media (max-width: 1280px) {
+/* @media (max-width: 1280px) {
     .navigation {
         right: 40px;
         gap: 14px;
@@ -910,9 +988,9 @@ body {
     .smoke-container {
         height: 270px;
     }
-}
+} */
 
-@media (max-width: 1150px) {
+/* @media (max-width: 1150px) {
     .active-grid,
     .past-grid {
         grid-template-columns: repeat(3, 282px);
@@ -929,10 +1007,1059 @@ body {
     .publicity-title {
         font-size: 28px;
     }
+} */
+/* моя вресия */
+/* @media (max-width: 1000px) {
+    .navigation {
+        background: #eeeeee ;
+        right: 20px;
+
+    }
+
+    
+    .navigation .nav-button:not(.menu-button) {
+        display: none;
+        position: relative;
+        right: 20px;
+
+    }
+
+    .menu-button {
+        display: flex;
+        right: 20px;
+    }
+    .hero-main-image {
+        width: min(770px, 100vh);
+        height: min(770px, 100vh);
+    }
+
+    .hero-main-image {
+        width: 575px;
+        height: 575px;
+    }
+
+    .hero-content {
+        position: absolute;
+        width: 575px;
+        height: 575px;
+        margin-top: 18px;
+        right: 80px;
+}
+
+
+    
+} */
+
+
+/* =====================================================
+   MOBILE VERSION — 768px and below
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* ---------- BASE ---------- */
+
+    html {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        width: 100%;
+        min-width: 0;
+        overflow-x: hidden;
+        background: #dddddd;
+    }
+
+
+    /* =================================================
+       HERO
+    ================================================= */
+
+    .hero {
+        position: relative;
+        width: 100%;
+        height: 80svh;
+        /* min-height: 780px; */
+        overflow: hidden;
+        background: #dddddd;
+    }
+
+    .hero-content {
+        position: absolute;
+
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        margin: 0;
+        right: auto;
+    }
+
+    .hero-cooperation-smoke img {
+        width: 800px;
+        bottom: 0px;
+    }
+    /* =================================================
+       TOP CONTACT BUTTON
+    ================================================= */
+
+    .navigation {
+        position: absolute;
+
+        top: 23px;
+        right: 19px;
+        left: auto;
+
+        z-index: 1000;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        width: auto;
+
+        gap: 0;
+
+        background: transparent;
+    }
+
+    /* Скрываем все кнопки кроме "Связаться" */
+    .navigation .nav-button:not(.menu-button) {
+        display: none;
+    }
+
+    .navigation .menu-button {
+        display: flex;
+
+        width: 158px;
+        height: 36px;
+
+        padding: 0 4px 0 15px;
+
+        border-radius: 13px;
+
+        box-sizing: border-box;
+
+        background: #e4e4e4;
+
+        box-shadow:
+            0 4px 7px rgba(0, 0, 0, 0.18),
+            inset 0 1px 1px rgba(255, 255, 255, 0.9);
+
+        transform: none;
+    }
+
+    .navigation .menu-button span {
+        flex: 1;
+
+        font-family: Arial, Helvetica, sans-serif;
+
+        font-size: 14px;
+        font-weight: 400;
+
+        line-height: 1;
+
+        color: #777777;
+
+        text-align: center;
+
+        white-space: nowrap;
+    }
+
+    .navigation .menu-button img {
+        display: block;
+
+        width: 34px;
+        height: 34px;
+
+        flex-shrink: 0;
+    }
+
+
+    /* =================================================
+       MAIN PHOTO
+    ================================================= */
+
+    .hero-main-image {
+        position: absolute;
+
+        top: 27px;
+        left: 50%;
+
+        bottom: auto;
+
+        z-index: 5;
+
+        /*
+         * Оригинал 1366 × 768.
+         * Высота 600px даёт нужный масштаб
+         * для мобильного макета.
+         */
+        width: auto;
+        height: 600px;
+
+        max-width: none;
+        max-height: none;
+
+        display: block;
+
+        object-fit: contain;
+
+        /*
+         * Центрируем изображение,
+         * затем немного сдвигаем влево.
+         */
+        transform: translateX(calc(-50% - 35px));
+
+        pointer-events: none;
+        user-select: none;
+    }
+
+
+    /* =================================================
+       SMOKE
+    ================================================= */
+
+   
+
+    /* .smoke-container {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        width: 100%;
+        height: 330px;
+
+        overflow: hidden;
+
+        z-index: 20;
+
+        pointer-events: none;
+    } */
+
+    /* .smoke {
+        width: 1050px;
+        height: 300px;
+        bottom: 0;
+    } */
+
+
+
+    /* =================================================
+       OTHER SECTIONS
+    ================================================= */
+    .cooperation-section {
+        position: relative;
+        width: 100%;
+
+        padding-top: 0px;
+        padding-bottom: 100px;
+
+        background: #dddddd;
+
+        overflow: hidden;
+    }
+
+
+    /* =================================================
+       1. ЗАГОЛОВОК
+    ================================================= */
+
+    .cooperation-intro {
+        width: 100%;
+        padding: 0 40px;
+
+        text-align: left;
+    }
+
+    .cooperation-title {
+        margin: 0;
+
+        font-size: 47px;
+        line-height: 1.02;
+        font-weight: 400;
+
+        letter-spacing: -1.8px;
+
+        text-align: left;
+
+        background: linear-gradient(
+            90deg,
+            #222222 0%,
+            #333333 35%,
+            #777777 65%,
+            #b8b8b8 100%
+        );
+
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+
+
+    /* =================================================
+       ОПИСАНИЕ ПОД ЗАГОЛОВКОМ
+    ================================================= */
+
+    .cooperation-description {
+        margin: 32px 0 0;
+
+        padding: 0;
+
+        color: #747474;
+
+        font-size: 23px;
+        line-height: 1.08;
+        font-weight: 400;
+
+        letter-spacing: -0.5px;
+
+        text-align: left;
+    }
+
+
+    /* =================================================
+       2. БИЗНЕС-ЗАДАЧА
+    ================================================= */
+
+    .business-goal {
+        width: 100%;
+
+        margin-top: 96px;
+
+        padding: 0 40px;
+
+        text-align: left;
+    }
+
+    .business-title {
+        margin: 0;
+
+        font-size: 46px;
+        line-height: 1.04;
+        font-weight: 400;
+
+        letter-spacing: -1.7px;
+
+        text-align: left;
+
+        background: linear-gradient(
+            90deg,
+            #222222 0%,
+            #333333 35%,
+            #777777 65%,
+            #b8b8b8 100%
+        );
+
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+
+
+    /* =================================================
+       3. ШЕСТЬ БИЗНЕС-ЗАДАЧ
+       
+       Используется готовая картинка sotr-group.png
+    ================================================= */
+
+    .goal-choices {
+        display: block;
+
+        width: calc(100% - 44px);
+        max-width: 670px;
+
+        height: auto;
+
+        margin: 36px auto 0;
+
+        object-fit: contain;
+
+        user-select: none;
+        pointer-events: none;
+    }
+
+
+    /* =================================================
+       4. КОМБИНАЦИЯ
+    ================================================= */
+
+    .combination-block {
+        width: 100%;
+
+        margin-top: 72px;
+
+        padding: 0 40px;
+
+        text-align: left;
+    }
+
+    .combination-title {
+        margin: 0;
+
+        font-size: 46px;
+        line-height: 1.04;
+        font-weight: 400;
+
+        letter-spacing: -1.7px;
+
+        text-align: left;
+
+        background: linear-gradient(
+            90deg,
+            #222222 0%,
+            #333333 35%,
+            #777777 65%,
+            #b8b8b8 100%
+        );
+
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+
+
+    /* =================================================
+       ДИАГРАММА
+    ================================================= */
+
+    .combination-image {
+        display: block;
+
+        width: 290px;
+        height: auto;
+
+        max-width: none;
+
+        margin: 62px auto 0;
+
+        object-fit: contain;
+
+        user-select: none;
+        pointer-events: none;
+    }
+
+
+    /* =================================================
+       ОПИСАНИЕ ПОД ДИАГРАММОЙ
+    ================================================= */
+
+    .combination-description {
+        margin: 62px 0 0;
+
+        padding: 0;
+
+        color: #727272;
+
+        font-size: 22px;
+        line-height: 1.08;
+        font-weight: 400;
+
+        letter-spacing: -0.3px;
+
+        text-align: left;
+    }
+
+
+    /* =================================================
+       5. ФИНАЛЬНЫЙ ТЕКСТ
+    ================================================= */
+
+    .cooperation-final {
+        width: 100%;
+
+        margin-top: 96px;
+
+        padding: 0 40px;
+
+        text-align: left;
+
+        font-size: 44px;
+        line-height: 1.08;
+        font-weight: 700;
+
+        letter-spacing: -1.8px;
+
+        background: linear-gradient(
+            90deg,
+            #222222 0%,
+            #333333 35%,
+            #777777 65%,
+            #b8b8b8 100%
+        );
+
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+
+    .cooperation-final p {
+        margin: 0;
+    }
+
+    /* =================================================
+       PROJECTS
+    ================================================= */
+
+    /* =====================================================
+       ОСНОВНАЯ СТРАНИЦА ПРОЕКТОВ
+       ===================================================== */
+
+    .projects-section,
+    .projects-page {
+        width: 100%;
+
+        padding-top: 105px;
+        padding-bottom: 80px;
+
+        overflow: hidden;
+    }
+
+
+    /* =====================================================
+       КОНТЕЙНЕРЫ ГРУПП
+       ===================================================== */
+
+    .projects-group {
+        width: 100%;
+        max-width: none;
+
+        margin-left: 0;
+        margin-right: 0;
+
+        padding: 0 40px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       ОТСТУПЫ МЕЖДУ ГРУППАМИ
+       ===================================================== */
+
+    .launched-group {
+        margin-top: 72px;
+    }
+
+    .past-group {
+        margin-top: 72px;
+    }
+
+    .ex-group {
+        margin-top: 72px;
+    }
+
+
+    /* =====================================================
+       ЗАГОЛОВКИ
+
+       Активны
+       Взлетело
+       Было
+       Экс Экс Экс
+       ===================================================== */
+
+    .group-title {
+        margin: 0;
+
+        text-align: center;
+
+        font-size: 34px;
+        line-height: 1;
+
+        font-weight: 600;
+
+        letter-spacing: -1px;
+
+        color: #343434;
+    }
+
+
+    /* =====================================================
+       СЕТКА КАРТОЧЕК
+
+       2 КОЛОНКИ
+       ===================================================== */
+
+    .active-grid,
+    .launched-grid,
+    .past-grid {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 8px 24px;
+
+        justify-content: center;
+
+        width: 100%;
+
+        margin-top: 24px;
+    }
+
+
+    /* =====================================================
+       КАРТОЧКА ПРОЕКТА
+       ===================================================== */
+
+    .project-card {
+        position: relative;
+
+        width: 100%;
+        height: 282px;
+
+        padding: 10px;
+
+        box-sizing: border-box;
+
+        border-radius: 14px;
+
+        overflow: hidden;
+
+        background: #e5e5e5;
+
+        border:
+            1px solid rgba(255, 255, 255, 0.85);
+
+        box-shadow:
+            0 5px 10px rgba(0, 0, 0, 0.14),
+            0 0 7px rgba(255, 255, 255, 0.75),
+            inset 0 1px 2px
+            rgba(255, 255, 255, 0.9);
+
+        display: flex;
+        flex-direction: column;
+
+        transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+
+
+    /* =====================================================
+       КАРТОЧКИ "ВЗЛЕТЕЛО"
+       ===================================================== */
+
+    .project-card-launched {
+        width: 100%;
+        height: 282px;
+    }
+
+
+    /* =====================================================
+       ИЗОБРАЖЕНИЕ
+       ===================================================== */
+
+    .project-image {
+        display: block;
+
+        width: 100%;
+        height: 136px;
+
+        flex: 0 0 136px;
+
+        object-fit: cover;
+
+        border-radius: 8px;
+
+        border:
+            1px solid rgba(255, 255, 255, 0.65);
+
+        box-shadow:
+            0 2px 4px rgba(0, 0, 0, 0.12);
+    }
+
+
+    /* =====================================================
+       НАЗВАНИЕ
+       ===================================================== */
+
+    .project-title {
+        margin: 10px 0 0;
+
+        color: #303030;
+
+        font-size: 20px;
+
+        line-height: 0.95;
+
+        font-weight: 500;
+
+        letter-spacing: -0.6px;
+    }
+
+
+    /* =====================================================
+       ОПИСАНИЕ
+       ===================================================== */
+
+    .project-description {
+        margin: 7px 0 0;
+
+        color: #555555;
+
+        font-size: 11px;
+
+        line-height: 1.05;
+
+        font-weight: 400;
+    }
+
+
+    /* =====================================================
+       ГОДЫ
+       ===================================================== */
+
+    .project-years {
+        position: absolute;
+
+        left: 10px;
+        bottom: 8px;
+
+        color: #8c8c8c;
+
+        font-size: 10px;
+
+        line-height: 1;
+    }
+
+
+    /* =====================================================
+       ЭКС ЭКС ЭКС
+
+       ОДНА КОЛОНКА
+       ===================================================== */
+
+    .ex-grid {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 7px;
+
+        width: 100%;
+
+        margin-top: 24px;
+    }
+
+
+    /* =====================================================
+       EX CARD
+       ===================================================== */
+
+    .ex-card {
+        position: relative;
+
+        width: 100%;
+        height: 60px;
+
+        padding: 8px 10px;
+
+        box-sizing: border-box;
+
+        border-radius: 11px;
+
+        background: #e5e5e5;
+
+        border:
+            1px solid rgba(255, 255, 255, 0.85);
+
+        box-shadow:
+            0 4px 8px rgba(0, 0, 0, 0.13),
+            0 0 6px rgba(255, 255, 255, 0.75),
+            inset 0 1px 2px
+            rgba(255, 255, 255, 0.9);
+    }
+
+
+    /* =====================================================
+       EX — НАЗВАНИЕ
+       ===================================================== */
+
+    .ex-main h3 {
+        margin: 0;
+
+        color: #303030;
+
+        font-size: 15px;
+
+        line-height: 1;
+
+        font-weight: 500;
+
+        letter-spacing: -0.3px;
+    }
+
+
+    /* =====================================================
+       EX — ОПИСАНИЕ
+       ===================================================== */
+
+    .ex-main p {
+        margin-top: 5px;
+
+        color: #5e5e5e;
+
+        font-size: 9px;
+
+        line-height: 1;
+    }
+
+
+    /* =====================================================
+       EX — ГОД
+       ===================================================== */
+
+    .ex-year {
+        position: absolute;
+
+        top: 9px;
+        right: 10px;
+
+        color: #858585;
+
+        font-size: 8px;
+
+        line-height: 1;
+
+        white-space: nowrap;
+    }
+
+
+    /* =================================================
+       PUBLICITY
+    ================================================= */
+
+    .page-title {
+        font-size: 28px;
+        line-height: 1;
+    }
+
+    .publicity-title {
+        padding: 0 20px;
+
+        font-size: 17px;
+        line-height: 1.1;
+    }
+
+    .media-today {
+        margin-top: 55px;
+    }
+
+    .media-grid {
+        width: calc(100% - 40px);
+
+        margin-top: 24px;
+
+        grid-template-columns: 1fr;
+
+        gap: 9px;
+    }
+
+    .media-card {
+        height: 46px;
+        padding: 7px 10px;
+        border-radius: 11px;
+    }
+
+    .media-card-header h3 {
+        font-size: 15px;
+        line-height: 16px;
+    }
+
+    .media-card-header span {
+        font-size: 9px;
+        line-height: 10px;
+    }
+
+    .media-card p {
+        margin: 2px 0 0;
+        font-size: 9px;
+        line-height: 10px;
+    }
+
+
+    /* =================================================
+       CONTACT
+    ================================================= */
+
+     .lecturer-block {
+        margin-top: 48px;
+    }
+
+    .lecturer-title {
+        margin: 0;
+
+        text-align: center;
+
+        font-size: 17px;
+        line-height: 18px;
+
+        font-weight: 400;
+
+        letter-spacing: -0.4px;
+
+        color: #4d4d4d;
+
+        text-shadow:
+            1px 2px 3px rgba(0, 0, 0, 0.12);
+    }
+
+
+    /* Ряд социальных кнопок */
+
+    .social-icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 10px;
+
+        margin-top: 58px;
+    }
+
+    .round-social-icon {
+        width: 64px;
+        height: 64px;
+
+        flex: 0 0 64px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0;
+        margin: 0;
+
+        background: transparent;
+        border: none;
+        box-shadow: none;
+
+        border-radius: 50%;
+
+        text-decoration: none;
+
+        transition:
+            transform 0.2s ease,
+            filter 0.2s ease;
+    }
+
+    .round-social-icon img {
+        display: block;
+
+        width: 64px;
+        height: 64px;
+
+        object-fit: contain;
+
+        /*
+         * Делаем логотип визуально рельефным,
+         * как на втором изображении
+         */
+        filter:
+            drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.20))
+            drop-shadow(-1px -1px 1px rgba(255, 255, 255, 0.95));
+    }
+
+    /* .round-social-icon:hover {
+        transform: translateY(-2px);
+    } */
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+@media (max-width: 390px) {
+
+    .hero {
+        min-height: 780px;
+    }
+
+    .navigation {
+        top: 23px;
+        right: 19px;
+    }
+
+    .navigation .menu-button {
+        width: 158px;
+        height: 36px;
+    }
+
+    .navigation .menu-button span {
+        font-size: 14px;
+    }
+
+    .hero-main-image {
+        top: 27px;
+        height: 600px;
+
+        transform: translateX(calc(-50% - 35px));
+    }
+
+    /* .smoke-container {
+        height: 245px;
+    } */
+
+    /* .smoke {
+        width: 1050px;
+        height: 300px;
+
+        bottom: -65px;
+    } */
+}
+
+
+/* =====================================================
+   EXTRA SMALL PHONES
+===================================================== */
+
+@media (max-width: 360px) {
+
+    .navigation {
+        right: 15px;
+    }
+
+    .navigation .menu-button {
+        width: 150px;
+        height: 35px;
+    }
+
+    .navigation .menu-button span {
+        font-size: 13px;
+    }
+
+    .hero-main-image {
+        height: 570px;
+
+        transform: translateX(calc(-50% - 32px));
+    }
+
+    /* .smoke-container {
+        height: 225px;
+    } */
+
+    /* .smoke {
+        width: 980px;
+        height: 280px;
+        bottom: -60px;
+    } */
 }
 
 /* 900px TABLET / SMALL SCREENS */
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
     .navigation {
         top: 25px;
         right: 20px;
@@ -1011,10 +2138,10 @@ body {
     .ex-grid {
         grid-template-columns: 1fr;
     }
-}
+} */
 
 /* 650px MOBILE */
-@media (max-width: 650px) {
+/* @media (max-width: 650px) {
     .hero {
         min-height: 650px;
     }
@@ -1195,7 +2322,24 @@ body {
     }
 
     .social-button {
-        width: 230px;
+        width: 178px;
+        height: 34px;
+        margin-top: 10px;
+        border-radius: 11px;
+        font-size: 13px;
+    }
+
+    .social-button-icon {
+        top: 3px;
+        right: 3px;
+        width: 26px;
+        height: 26px;
+        border-radius: 9px;
+    }
+
+    .social-button-icon svg {
+        width: 17px;
+        height: 17px;
     }
 
     .direct-contact {
@@ -1226,10 +2370,10 @@ body {
         width: 34px;
         height: 34px;
     }
-}
+} */
 
 /* 450px SMALL MOBILE */
-@media (max-width: 450px) {
+/* @media (max-width: 450px) {
     .navigation {
         gap: 4px;
     }
@@ -1318,7 +2462,7 @@ body {
         width: 31px;
         height: 31px;
     }
-}
+} */
 
 
 /* =====================================================
