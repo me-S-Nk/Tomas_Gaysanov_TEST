@@ -916,8 +916,8 @@ body {
 }
 
 .round-social-icon {
-    width: 65px;
-    height: 65px;
+    width: 44px;
+    height: 44px;
 
     flex: 0 0 44px;
 
@@ -951,8 +951,8 @@ body {
 .round-social-icon img {
     display: block;
 
-    width: 64px;
-    height: 64px;
+    width: 65px;
+    height: 65px;
 
     object-fit: contain;
 }
